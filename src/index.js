@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 const toQueryString = (inputs = {}) => {
   const pairs = [];
   const keys = Object.keys(inputs);

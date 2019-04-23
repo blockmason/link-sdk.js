@@ -1,6 +1,6 @@
 {
   "name": "@blockmason/link-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Convenience library for accessing an API hosted on Blockmason Link.",
   "main": "index.js",
   "repository": "https://github.com/blockmason/link-sdk.js",
@@ -20,10 +20,12 @@
     "lint": "eslint src",
     "test": "find src -type f -name spec.js | xargs nyc --silent --check-coverage --lines 100 --per-file mocha --require @babel/register src/spec.setup.js"
   },
+  "dependencies": {
+    "@babel/polyfill": "7.4.3"
+  },
   "devDependencies": {
     "@babel/cli": "7.4.3",
     "@babel/core": "7.4.3",
-    "@babel/polyfill": "7.4.3",
     "@babel/preset-env": "7.4.3",
     "@babel/register": "7.4.0",
     "babel-eslint": "10.0.1",
