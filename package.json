@@ -9,6 +9,9 @@
     "name": "Devin Canterberry"
   },
   "license": "MIT",
+  "publishConfig": {
+    "repository": "git@github.com:blockmason/link-sdk.js.package.git"
+  },
   "scripts": {
     "build": "rm -vfR lib; babel --only '**/index.js' --no-comments --compact true --minified --source-maps false --out-dir lib src; cp -vfR package.json yarn.lock README.md LICENSE.md lib/",
     "clean": "rm -fR lib docs .nyc_output",
