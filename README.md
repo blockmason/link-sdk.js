@@ -1,5 +1,7 @@
 # Blockmason Link SDK for JavaScript
 
+[![CircleCI][3]][4]
+
 ## Installing
 
 To add this library to your app, do one of the following:
@@ -77,3 +79,5 @@ await project.post('/mint', {
 
 [1]: https://yarnpkg.com/
 [2]: https://nodejs.org/
+[3]: https://circleci.com/gh/blockmason/link-sdk.js.svg?style=svg
+[4]: https://circleci.com/gh/blockmason/link-sdk.js
