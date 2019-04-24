@@ -1,6 +1,6 @@
 {
   "name": "@blockmason/link-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convenience library for accessing an API hosted on Blockmason Link.",
   "main": "index.js",
   "repository": "https://github.com/blockmason/link-sdk.js",
