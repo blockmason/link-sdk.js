@@ -61,7 +61,7 @@ pass in a `fetch()` implementation along as a second parameter, like this:
 
 ```
 const fetch = require('node-fetch');
-const link = require('@blockmason/link-sdk');
+const { link } = require('@blockmason/link-sdk');
 
 const project = link({
   clientId: '<your-client-id>',
