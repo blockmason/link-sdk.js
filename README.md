@@ -27,13 +27,13 @@ First, your app should import the `link` module from this library.
 Using ES6:
 
 ```
-import { link } from '@blockmason/link';
+import { link } from '@blockmason/link-sdk';
 ```
 
 Using CommonJS modules (Node.js):
 
 ```
-const { link } = require('@blockmason/link');
+const { link } = require('@blockmason/link-sdk');
 ```
 
 ### Configuring
@@ -50,6 +50,28 @@ const project = link({
 
 Use the **Client ID** and **Client Secret** provided by your Link project
 to fill in the respective values above.
+
+#### Using from a Node.js environment
+
+The Link SDK uses [`fetch()`][5] to make HTTP requests. Most modern browsers
+provide this function as a global, but it is absent from Node.js.
+
+When calling the `link()` function from a Node.js environment, you can
+pass in a `fetch()` implementation along as a second parameter, like this:
+
+```
+const fetch = require('node-fetch');
+const link = require('@blockmason/link-sdk');
+
+const project = link({
+  clientId: '<your-client-id>',
+  clientSecret: '<your-client-secret>'
+}, {
+  fetch
+});
+```
+
+The above snippet uses the [`node-fetch`][6] compatibility package.
 
 ### Interacting with your Link project
 
@@ -81,3 +103,5 @@ await project.post('/mint', {
 [2]: https://nodejs.org/
 [3]: https://circleci.com/gh/blockmason/link-sdk.js.svg?style=svg
 [4]: https://circleci.com/gh/blockmason/link-sdk.js
+[5]: https://fetch.spec.whatwg.org/
+[6]: https://www.npmjs.com/package/node-fetch
