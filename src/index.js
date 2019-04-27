@@ -40,7 +40,9 @@ const link = (options = {}, dependencies = {}) => {
       return Promise.resolve(credential.accessToken);
     }
 
-    const response = await proxy.fetch(`${baseUrl}/oauth2/token`, {
+    const { fetch: proxyFetch } = proxy;
+
+    const response = await proxyFetch(`${baseUrl}/oauth2/token`, {
       body: JSON.stringify(credential.refreshToken ? {
         grant_type: 'refresh_token',
         refresh_token: credential.refreshToken
@@ -69,8 +71,9 @@ const link = (options = {}, dependencies = {}) => {
   };
 
   const authenticated = async (path, fetchOptions = {}) => {
+    const { fetch: proxyFetch } = proxy;
     const accessToken = await authenticate();
-    const response = await proxy.fetch(`${baseUrl}/v1${path}`, {
+    const response = await proxyFetch(`${baseUrl}/v1${path}`, {
       ...fetchOptions,
       headers: {
         ...fetchOptions.headers,
