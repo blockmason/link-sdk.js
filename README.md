@@ -1,5 +1,7 @@
 # Blockmason Link SDK for JavaScript
 
+[![Link SDK][7]][8]
+
 [![CircleCI][3]][4]
 
 ## Installing
@@ -105,3 +107,5 @@ await project.post('/mint', {
 [4]: https://circleci.com/gh/blockmason/link-sdk.js
 [5]: https://fetch.spec.whatwg.org/
 [6]: https://www.npmjs.com/package/node-fetch
+[7]: https://blockmason.link/wp-content/uploads/2019/07/LINK-SDK.png
+[8]: https://blockmason.link/
