@@ -107,5 +107,5 @@ await project.post('/mint', {
 [4]: https://circleci.com/gh/blockmason/link-sdk.js
 [5]: https://fetch.spec.whatwg.org/
 [6]: https://www.npmjs.com/package/node-fetch
-[7]: https://blockmason.link/wp-content/uploads/2019/07/LINK-SDK.png
+[7]: https://mason.link/sdk.png
 [8]: https://blockmason.link/
