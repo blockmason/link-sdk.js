@@ -1,4 +1,4 @@
-import '@babel/polyfill';
+import 'regenerator-runtime/runtime';
 
 const toQueryString = (inputs = {}) => {
   const pairs = [];
