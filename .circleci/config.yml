@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: "/docker/project"
   docker:
-  - image: blockmason/nodejs:11.14.0
+  - image: blockmason/nodejs:12.9.1
 
 workflows:
   version: 2
